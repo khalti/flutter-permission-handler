@@ -9,6 +9,18 @@ environment:
   sdk: ">=2.15.0 <4.0.0"
   flutter: ">=2.8.0"
 
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: permission_handler_android
+      ios:
+        default_package: permission_handler_apple
+      windows:
+        default_package: permission_handler_windows
+      web:
+        default_package: permission_handler_web
+
 dependencies:
   flutter:
     sdk: flutter
@@ -21,7 +33,8 @@ dependencies:
     path: ../permission_handler_windows
   permission_handler_web:
     path: ../permission_handler_web
-  permission_handler_platform_interface: ^3.11.5
+  permission_handler_platform_interface:
+    path: ../permission_handler_platform_interface
 
 dev_dependencies:
   flutter_lints: ^1.0.4
@@ -29,15 +42,3 @@ dev_dependencies:
     sdk: flutter
   mockito: ^5.0.1
   plugin_platform_interface: ^2.0.0
-
-flutter:
-  plugin:
-    platforms:
-      android:
-        default_package: permission_handler_android
-      ios:
-        default_package: permission_handler_apple
-      windows:
-        default_package: permission_handler_windows
-      web:
-        default_package: permission_handler_web
